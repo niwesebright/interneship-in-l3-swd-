@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright Care Clinic - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <aside>
+        <div class="logo">
+            <h3><img src="clinic.png" controls width="40" height="40">Bright Care Clinic </h3>
+        </div>
+        <ul>
+            <li><a href="index.html" class="active">📊 Dashboard</a></li>
+            <li><a href="checkin.html">📝 Check-in</a></li>
+            <li><a href="patients.html">👥 Patients</a></li>
+            <li><a href="queue.html">⏳ Queue</a></li>
+            <li><a href="appointments.html">📅 Appointments</a></li>
+            <li><a href="settings.html">⚙️ Settings</a></li>
+            <li><a href="logout.html">🚪 Logout</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <div class="header">
+            <h2>Dashboard</h2>
+            <div class="datetime" id="datetime"></div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">👥</div>
+                <div class="stat-info">
+                    <h3 id="totalPatients">0</h3>
+                    <p>Total Patients</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⏳</div>
+                <div class="stat-info">
+                    <h3 id="waitingCount">0</h3>
+                    <p>Waiting</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">✅</div>
+                <div class="stat-info">
+                    <h3 id="checkedCount">0</h3>
+                    <p>Checked In</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📅</div>
+                <div class="stat-info">
+                    <h3 id="todayCount">0</h3>
+                    <p>Today's Visits</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="recent-section">
+            <h3>Recent Check-ins</h3>
+            <table class="data-table">
+                <thead>
+                    <tr><th>#</th><th>Name</th><th>Age</th><th>Status</th><th>Time</th></tr>
+                </thead>
+                <tbody id="recentTable"></tbody>
+            </table>
+        </div>
+
+        <div class="current-queue-preview">
+            <h3>Current Queue <a href="queue.html" class="view-link">View Full Queue →</a></h3>
+            <table class="data-table">
+                <thead>
+                    <tr><th>#</th><th>Patient Name</th><th>Age</th><th>Status</th></tr>
+                </thead>
+                <tbody id="queuePreview"></tbody>
+            </table>
+        </div>
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

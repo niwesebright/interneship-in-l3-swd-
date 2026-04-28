@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright Currency - Settings</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="logo.png" width="120" height="120" alt="Logo">
+        <h1>💱 BRIGHT CURRENCY EXCHANGE</h1>
+        <p>Customize Your Experience</p>
+    </header>
+
+    <nav>
+        <button><a href="index.html">🏠 Home</a></button>
+        <button><a href="converter.html">💱 Converter</a></button>
+        <button><a href="details.html">📊 Details</a></button>
+        <button><a href="history.html">📜 History</a></button>
+        <button><a href="setting.html">⚙️ Settings</a></button>
+    </nav>
+
+    <div class="container">
+        <div class="grid-2">
+            <div class="box">
+                <h3>🎨 Appearance</h3>
+                <div class="switch" style="display: flex; justify-content: space-between; align-items: center;">
+                    <span id="modeText" style="font-size: 1.1rem;">🌙 Dark Mode</span>
+                    <label class="switch-toggle">
+                        <input type="checkbox" id="modeToggle" onchange="toggleMode()">
+                        <span style="cursor: pointer; font-size: 1.5rem;">🌓</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>💰 Default Currency</h3>
+                <select id="defaultCurrencySelect" onchange="saveDefaultCurrency()">
+                    <option value="USD">🇺🇸 USD - US Dollar</option>
+                    <option value="EUR">🇪🇺 EUR - Euro</option>
+                    <option value="GBP">🇬🇧 GBP - British Pound</option>
+                    <option value="RWF">🇷🇼 RWF - Rwandan Franc</option>
+                    <option value="KES">🇰🇪 KES - Kenyan Shilling</option>
+                    <option value="UGX">🇺🇬 UGX - Ugandan Shilling</option>
+                    <option value="TZS">🇹🇿 TZS - Tanzanian Shilling</option>
+                </select>
+                <button onclick="saveDefaultCurrency()" style="margin-top: 15px;">💾 Save Default Currency</button>
+            </div>
+
+            <div class="box">
+                <h3>🌐 Language</h3>
+                <select id="languageSelect" onchange="changeLanguage()">
+                    <option value="en">🇬🇧 English</option>
+                    <option value="rw">🇷🇼 Kinyarwanda</option>
+                    <option value="fr">🇫🇷 Français</option>
+                    <option value="sw">🇹🇿 Kiswahili</option>
+                </select>
+                <button onclick="changeLanguage()" style="margin-top: 15px;">💾 Save Language</button>
+            </div>
+
+            <div class="box">
+                <h3>ℹ️ About</h3>
+                <p><strong>Version:</strong> 2.0.0</p>
+                <p><strong>Developer:</strong> Bright Currency Team</p>
+                <p><strong>Rates Updated:</strong> Daily</p>
+                <p><strong>Supported Currencies:</strong> 12+</p>
+                <hr style="margin: 15px 0;">
+                <p><strong>Contact:</strong><br>
+                📧 brightcurrencyexchange@gmail.com<br>
+                📞 +250 788 123 456</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>🏦 Bright Currency Exchange | 📧 brightcurrencyexchange@gmail.com</p>
+        <p>© 2024 Bright Currency Exchange. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

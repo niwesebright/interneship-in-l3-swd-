@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright Care Clinic - Appointments</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <aside>
+        <div class="logo">
+            <h3><img src="clinic.png" controls width="40" height="40">Bright Care clinic</h3>
+        </div>
+        <ul>
+            <li><a href="index.html">📊 Dashboard</a></li>
+            <li><a href="checkin.html">📝 Check-in</a></li>
+            <li><a href="patients.html">👥 Patients</a></li>
+            <li><a href="queue.html">⏳ Queue</a></li>
+            <li><a href="appointments.html" class="active">📅 Appointments</a></li>
+            <li><a href="settings.html">⚙️ Settings</a></li>
+            <li><a href="logout.html">🚪 Logout</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <div class="header">
+            <h2>Appointments</h2>
+            <button class="new-appt-btn" onclick="showAppointmentForm()">+ New Appointment</button>
+        </div>
+
+        <div id="appointmentForm" class="form-box hidden">
+            <h3>Schedule Appointment</h3>
+            <div class="form-group">
+                <input type="text" id="apptName" placeholder="Patient name">
+            </div>
+            <div class="form-group">
+                <input type="date" id="apptDate">
+            </div>
+            <div class="form-group">
+                <input type="time" id="apptTime">
+            </div>
+            <button onclick="addAppointment()" class="submit-btn">Schedule</button>
+            <button onclick="hideAppointmentForm()" class="cancel-btn">Cancel</button>
+        </div>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Patient Name</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="appointmentsTable"></tbody>
+        </table>
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

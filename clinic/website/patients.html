@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright Care Clinic - Patients</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <aside>
+        <div class="logo">
+            <h3><img src="clinic.png" controls width="40" height="40">Bright Care clinic</h3>
+        </div>
+        <ul>
+            <li><a href="index.html">📊 Dashboard</a></li>
+            <li><a href="checkin.html">📝 Check-in</a></li>
+            <li><a href="patients.html" class="active">👥 Patients</a></li>
+            <li><a href="queue.html">⏳ Queue</a></li>
+            <li><a href="appointments.html">📅 Appointments</a></li>
+            <li><a href="settings.html">⚙️ Settings</a></li>
+            <li><a href="logout.html">🚪 Logout</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <div class="header">
+            <h2>Patients Directory</h2>
+            <input type="text" id="searchPatients" placeholder="🔍 Search patients..." class="search-input">
+        </div>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Phone</th>
+                    <th>Status</th>
+                    <th>Last Visit</th>
+                </tr>
+            </thead>
+            <tbody id="patientsTable"></tbody>
+        </table>
+
+        <div class="pagination">
+            <button onclick="prevPage()">← Previous</button>
+            <span id="pageInfo">Page 1</span>
+            <button onclick="nextPage()">Next →</button>
+        </div>
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

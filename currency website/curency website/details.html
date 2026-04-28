@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright Currency - Currency Details</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="logo.png" width="120" height="120" alt="Logo">
+        <h1>💱 BRIGHT CURRENCY EXCHANGE</h1>
+        <p>Detailed Currency Information</p>
+    </header>
+
+    <nav>
+        <button><a href="index.html">🏠 Home</a></button>
+        <button><a href="converter.html">💱 Converter</a></button>
+        <button><a href="details.html">📊 Details</a></button>
+        <button><a href="history.html">📜 History</a></button>
+        <button><a href="setting.html">⚙️ Settings</a></button>
+    </nav>
+
+    <div class="container">
+        <div class="grid-2">
+            <div class="box">
+                <h3>🔍 Currency Information</h3>
+                <label>Select Currency:</label>
+                <select id="currencySelect" onchange="loadCurrencyInfo()">
+                    <option value="USD">🇺🇸 USD - US Dollar</option>
+                    <option value="EUR">🇪🇺 EUR - Euro</option>
+                    <option value="GBP">🇬🇧 GBP - British Pound</option>
+                    <option value="RWF" selected>🇷🇼 RWF - Rwandan Franc</option>
+                    <option value="KES">🇰🇪 KES - Kenyan Shilling</option>
+                    <option value="UGX">🇺🇬 UGX - Ugandan Shilling</option>
+                    <option value="TZS">🇹🇿 TZS - Tanzanian Shilling</option>
+                    <option value="JPY">🇯🇵 JPY - Japanese Yen</option>
+                    <option value="INR">🇮🇳 INR - Indian Rupee</option>
+                    <option value="CNY">🇨🇳 CNY - Chinese Yuan</option>
+                    <option value="CAD">🇨🇦 CAD - Canadian Dollar</option>
+                    <option value="AUD">🇦🇺 AUD - Australian Dollar</option>
+                </select>
+                
+                <div id="info" style="background: #f0f0f0; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                    <strong>Rwandan Franc (RWF)</strong><br>
+                    🌍 Country: Rwanda<br>
+                    💱 Symbol: FRw
+                </div>
+                
+                <div id="rate" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 15px; border-radius: 10px;">
+                    📈 1 USD = 1300 RWF<br>
+                    📉 1 RWF = 0.00077 USD
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>📈 Currency Comparison</h3>
+                <div id="comparison">
+                    <p><strong>1 USD =</strong></p>
+                    <ul style="margin-left: 20px; line-height: 2;">
+                        <li>🇪🇺 0.92 EUR</li>
+                        <li>🇬🇧 0.79 GBP</li>
+                        <li>🇷🇼 1,300 RWF</li>
+                        <li>🇰🇪 128 KES</li>
+                        <li>🇯🇵 150 JPY</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>📊 Historical Trend (USD to RWF)</h3>
+                <div class="bar" style="width: 100%">2024: 1,250 RWF</div>
+                <div class="bar" style="width: 104%">2025: 1,300 RWF</div>
+                <div class="bar" style="width: 108%">2026: 1,350 RWF</div>
+                <p style="margin-top: 15px; text-align: center;">📈 RWF has depreciated by ~8% over 3 years</p>
+            </div>
+
+            <div class="box">
+                <h3>⏰ Last 30 Days Performance</h3>
+                <canvas id="trendChart" style="width: 100%; height: 200px; background: #f9f9f9; border-radius: 10px;"></canvas>
+                <p style="margin-top: 10px; font-size: 12px; text-align: center;">⬆️ Highest: 1,310 | ⬇️ Lowest: 1,285</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>🏦 Bright Currency Exchange | 📧 brightcurrencyexchange@gmail.com</p>
+        <p>© 2024 Bright Currency Exchange. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

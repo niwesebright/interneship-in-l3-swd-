@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright Care Clinic - Queue</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <aside>
+        <div class="logo">
+            <h3><img src="clinic.png" controls width="40" height="40">Bright Care clinic</h3>
+        </div>
+        <ul>
+            <li><a href="index.html">📊 Dashboard</a></li>
+            <li><a href="checkin.html">📝 Check-in</a></li>
+            <li><a href="patients.html">👥 Patients</a></li>
+            <li><a href="queue.html" class="active">⏳ Queue</a></li>
+            <li><a href="appointments.html">📅 Appointments</a></li>
+            <li><a href="settings.html">⚙️ Settings</a></li>
+            <li><a href="logout.html">🚪 Logout</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <div class="header">
+            <h2>Patient Queue</h2>
+            <div class="queue-actions">
+                <button onclick="refreshQueue()" class="small-btn">🔄 Refresh</button>
+                <button onclick="clearQueue()" class="small-btn danger">🗑️ Clear All</button>
+            </div>
+        </div>
+
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Patient Name</th>
+                    <th>Age</th>
+                    <th>Reason</th>
+                    <th>Status</th>
+                    <th>Check-in Time</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="queueTable"></tbody>
+        </table>
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

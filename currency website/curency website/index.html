@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright Currency Exchange - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="logo.png" width="120" height="120" alt="Bright Currency Logo">
+        <h1>💱 BRIGHT CURRENCY EXCHANGE</h1>
+        <p>Your Trusted Partner for Real-Time Currency Conversion</p>
+    </header>
+
+    <nav>
+        <button><a href="index.html">🏠 Home</a></button>
+        <button><a href="converter.html">💱 Converter</a></button>
+        <button><a href="details.html">📊 Details</a></button>
+        <button><a href="history.html">📜 History</a></button>
+        <button><a href="setting.html">⚙️ Settings</a></button>
+    </nav>
+
+    <div class="container">
+        <div class="grid-2">
+            <div class="box">
+                <h3>🌟 Welcome to Bright Exchange</h3>
+                <p>"SimpleChange is a simple, fast platform for exchanging currencies from anywhere in the world. We provide you with
+                 real-time exchange rates, easy-to-use tools, and absolutely no hassle. Just enter your amount, select your currencies, and get instant results."</p>
+                <br>
+                <p><strong>Why choose us?</strong></p>
+                <ul style="margin-left: 20px; line-height: 1.8;">
+                    <li> Real-time exchange rates</li>
+                    <li> Over 12 major currencies</li>
+                    <li> Works on all devices</li>
+                    <li> Safe & secure</li>
+                    <li>100% free to use</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h3>Quick Converter</h3>
+                <label> Amount:</label>
+                <input type="number" id="simpleAmount" placeholder="Enter amount" value="100" oninput="simpleConvert()">
+                
+                <label>🔄 Conversion Type:</label>
+                <select id="simpleRate" onchange="simpleConvert()">
+                    <option value="1300">USD → RWF (1 USD = 1,300 RWF)</option>
+                    <option value="0.00077">RWF → USD (1 RWF = 0.00077 USD)</option>
+                    <option value="1200">EUR → RWF (1 EUR = 1,200 RWF)</option>
+                </select>
+                
+                <h3 id="simpleResult" style="text-align: center; margin-top: 20px;">Result: 130,000 RWF</h3>
+                
+                <button onclick="window.location.href='converter.html'"> Go to Full Converter →</button>
+            </div>
+        </div>
+
+        <div class="box" style="text-align: center;">
+            <h3>Live Exchange Rates (vs USD)</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-top: 20px;">
+                <div><strong>🇺🇸 USD</strong><br>1.00</div>
+                <div><strong>🇷🇼 RWF</strong><br>1,300</div>
+                <div><strong>🇪🇺 EUR</strong><br>0.92</div>
+                <div><strong>🇬🇧 GBP</strong><br>0.79</div>
+                <div><strong>🇰🇪 KES</strong><br>128.00</div>
+                <div><strong>🇯🇵 JPY</strong><br>150.00</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p> Bright Currency Exchange |  brightcurrencyexchange@gmail.com</p>
+        <p>© 2024 Bright Currency Exchange. All Rights Reserved.</p>
+        <p> Rates updated: Daily at 00:00 UTC</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright Currency - Conversion History</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="logo.png" width="120" height="120" alt="Logo">
+        <h1>💱 BRIGHT CURRENCY EXCHANGE</h1>
+        <p>Your Conversion History</p>
+    </header>
+
+    <nav>
+        <button><a href="index.html">🏠 Home</a></button>
+        <button><a href="converter.html">💱 Converter</a></button>
+        <button><a href="details.html">📊 Details</a></button>
+        <button><a href="history.html">📜 History</a></button>
+        <button><a href="setting.html">⚙️ Settings</a></button>
+    </nav>
+
+    <div class="container">
+        <div class="box">
+            <h3>📜 Conversion History</h3>
+            
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px;">
+                <input type="text" id="search" placeholder="🔍 Search currency..." onkeyup="filterHistory()" style="flex:2">
+                <select id="filter" onchange="filterHistory()" style="flex:1">
+                    <option value="ALL">🌍 All Currencies</option>
+                    <option value="USD">🇺🇸 USD</option>
+                    <option value="EUR">🇪🇺 EUR</option>
+                    <option value="GBP">🇬🇧 GBP</option>
+                    <option value="RWF">🇷🇼 RWF</option>
+                    <option value="KES">🇰🇪 KES</option>
+                </select>
+                <button onclick="clearHistory()" style="background: #dc3545;">🗑️ Clear All</button>
+            </div>
+            
+            <div id="historyList">
+                <div class="history-item">📭 No conversion history yet. Try converting some currencies!</div>
+            </div>
+        </div>
+        
+        <div class="box">
+            <h3>📊 Statistics</h3>
+            <div id="stats">
+                <p><strong>Total Conversions:</strong> <span id="totalCount">0</span></p>
+                <p><strong>Most Used Currency:</strong> <span id="mostUsed">-</span></p>
+                <p><strong>Last Conversion:</strong> <span id="lastConversion">-</span></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>🏦 Bright Currency Exchange | 📧 brightcurrencyexchange@gmail.com</p>
+        <p>© 2024 Bright Currency Exchange. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

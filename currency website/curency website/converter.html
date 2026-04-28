@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright Currency - Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="logo.png" width="120" height="120" alt="Logo">
+        <h1>💱 BRIGHT CURRENCY EXCHANGE</h1>
+        <p>Your Trusted Currency Partner Since 2024</p>
+    </header>
+
+    <nav>
+        <button><a href="index.html">🏠 Home</a></button>
+        <button><a href="converter.html">💱 Converter</a></button>
+        <button><a href="details.html">📊 Details</a></button>
+        <button><a href="history.html">📜 History</a></button>
+        <button><a href="setting.html">⚙️ Settings</a></button>
+    </nav>
+
+    <div class="container">
+        <div class="box" style="max-width: 600px; margin: 20px auto;">
+            <h3>Currency Converter</h3>
+            
+            <label>Amount:</label>
+            <input type="number" id="amount" placeholder="Enter amount" value="100">
+            
+            <label>🔄 From:</label>
+            <select id="from">
+                <option value="USD">🇺🇸 USD - US Dollar</option>
+                <option value="EUR">🇪🇺 EUR - Euro</option>
+                <option value="GBP">🇬🇧 GBP - British Pound</option>
+                <option value="RWF" selected>🇷🇼 RWF - Rwandan Franc</option>
+                <option value="KES">🇰🇪 KES - Kenyan Shilling</option>
+                <option value="UGX">🇺🇬 UGX - Ugandan Shilling</option>
+                <option value="TZS">🇹🇿 TZS - Tanzanian Shilling</option>
+                <option value="JPY">🇯🇵 JPY - Japanese Yen</option>
+                <option value="INR">🇮🇳 INR - Indian Rupee</option>
+                <option value="CNY">🇨🇳 CNY - Chinese Yuan</option>
+                <option value="CAD">🇨🇦 CAD - Canadian Dollar</option>
+                <option value="AUD">🇦🇺 AUD - Australian Dollar</option>
+            </select>
+            
+            <label>To:</label>
+            <select id="to">
+                <option value="USD">🇺🇸 USD - US Dollar</option>
+                <option value="EUR">🇪🇺 EUR - Euro</option>
+                <option value="GBP">🇬🇧 GBP - British Pound</option>
+                <option value="RWF" selected>🇷🇼 RWF - Rwandan Franc</option>
+                <option value="KES">🇰🇪 KES - Kenyan Shilling</option>
+                <option value="UGX">🇺🇬 UGX - Ugandan Shilling</option>
+                <option value="TZS">🇹🇿 TZS - Tanzanian Shilling</option>
+                <option value="JPY">🇯🇵 JPY - Japanese Yen</option>
+                <option value="INR">🇮🇳 INR - Indian Rupee</option>
+                <option value="CNY">🇨🇳 CNY - Chinese Yuan</option>
+                <option value="CAD">🇨🇦 CAD - Canadian Dollar</option>
+                <option value="AUD">🇦🇺 AUD - Australian Dollar</option>
+            </select>
+            
+            <div style="display: flex; gap: 10px;">
+                <button onclick="swapCurrency()" style="flex:1">🔄 Swap</button>
+                <button onclick="convertCurrency()" style="flex:2">✨ Convert Now</button>
+            </div>
+            
+            <div id="loader" class="loader"></div>
+            <div id="result"></div>
+            <p id="datetime" style="text-align: center; margin-top: 15px; font-size: 12px; color: #888;"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>🏦 Bright Currency Exchange | 📧 brightcurrencyexchange@gmail.com</p>
+        <p>© 2024 Bright Currency Exchange. All Rights Reserved.</p>
+        <p>⏱️ Live Rates - Updated Daily</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
